@@ -14,6 +14,7 @@ import android.widget.EditText;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import java.util.List;
 import java.util.UUID;
 
 public class CrimeFragment extends Fragment {
@@ -35,8 +36,9 @@ public class CrimeFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        mCrime = new Crime();
-        UUID crimeId = (UUID) getActivity().getIntent()
-                .getSerializableExtra(CrimeActivity.EXTRA_CRIME_ID);
+//        UUID crimeId = (UUID) getActivity().getIntent()
+//                .getSerializableExtra(CrimeActivity.EXTRA_CRIME_ID);
+        UUID crimeId = (UUID) getArguments().getSerializable(ARG_CRIME_ID);
         mCrime = CrimeLab.get(getActivity()).getCrime(crimeId);
     }
 
@@ -83,5 +85,7 @@ public class CrimeFragment extends Fragment {
 
         return v;
     }
+
+
 
 }
