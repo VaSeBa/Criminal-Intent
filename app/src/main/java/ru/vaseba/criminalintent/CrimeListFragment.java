@@ -25,7 +25,6 @@ public class CrimeListFragment extends Fragment {
         private ImageView mSolvedImageView;
         private Crime mCrime;
 
-
         public CrimeHolder(LayoutInflater inflater, ViewGroup parent) {
             super(inflater.inflate(R.layout.list_item_crime, parent, false));
             itemView.setOnClickListener(this);
