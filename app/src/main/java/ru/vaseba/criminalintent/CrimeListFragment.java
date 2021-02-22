@@ -41,7 +41,9 @@ public class CrimeListFragment extends Fragment {
 //                    .show();
 
 //            Intent intent = new Intent(getActivity(), CrimeActivity.class);
-            Intent intent = CrimeActivity.newIntent(getActivity(), mCrime.getId());
+//            Intent intent = CrimeActivity.newIntent(getActivity(), mCrime.getId());
+            Intent intent = CrimePagerActivity.newIntent(getActivity(), mCrime.
+                    getId());
             startActivity(intent);
         }
 
@@ -110,5 +112,5 @@ public class CrimeListFragment extends Fragment {
             mAdapter.notifyDataSetChanged();
         }
     }
-//230
+
 }
