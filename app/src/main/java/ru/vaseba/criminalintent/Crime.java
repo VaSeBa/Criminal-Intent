@@ -11,7 +11,6 @@ public class Crime {
 
     public Crime() {
         mId = UUID.randomUUID();
-
     }
 
     public Crime(UUID id) {
